@@ -260,19 +260,8 @@ textarea.input {
 
 .label {
   color: #bb9c66;
+  font-size: 2.5rem;
   line-height: 1.6;
-}
-
-@supports (font-size: clamp( 2.5rem , 2.5rem  +  0vw , 2.5rem )) {
-  .label {
-    font-size: clamp( 2.5rem , 2.5rem  +  0vw , 2.5rem );
-  }
-}
-
-@supports not (font-size: clamp( 2.5rem , 2.5rem  +  0vw , 2.5rem )) {
-  .label {
-    font-size: calc(2.5rem + 0 * (100vw - 20rem) / 41.25);
-  }
 }
 
 .title {
@@ -1305,6 +1294,16 @@ textarea.input {
 
 .item-lots__image-ibg {
   padding-bottom: 100%;
+}
+
+.item-lots__image-ibg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .item-lots__title {
