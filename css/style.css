@@ -236,6 +236,7 @@ textarea.input {
 .item-top-category__title,
 .item-lots__title,
 .controll-slider-products__info,
+.menu__link-footer,
 .menu__link,
 .actions-header__region,
 .headline,
@@ -899,8 +900,30 @@ textarea.input {
   text-align: left;
 }
 
-.menu__link_font-size {
+.menu__link-footer {
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  color: #fff;
   font-size: 0.9375rem;
+  line-height: 1.5;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.menu__link-footer::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0%;
+  background-color: #bb9c66;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.menu__link-footer._navigator-active {
+  color: #bb9c66;
 }
 
 .callback {
@@ -2833,6 +2856,11 @@ textarea.input {
 
   .menu-header__link:hover {
     text-decoration: underline;
+  }
+
+  .menu__link-footer:hover::after {
+    content: "";
+    width: 100%;
   }
 
   .item-top-category:hover .item-top-category__image {
