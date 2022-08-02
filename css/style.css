@@ -900,7 +900,7 @@ textarea.input {
 }
 
 .menu__link_font-size {
-  font-size: inherit;
+  font-size: 0.9375rem;
 }
 
 .callback {
